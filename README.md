@@ -1,0 +1,2 @@
+# Beauty-zone
+training project
