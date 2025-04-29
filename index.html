@@ -10,10 +10,12 @@
     <header>
       <div class="container">
         <nav class="main_navigation">
-          <a href="/">
+          <a href="/" class="main_navigation_logo">
             <img
               src="./images/logo.svg"
               alt="Логотип косметологічної клініки"
+              width="74"
+              height="42"
             />
           </a>
           <ul class="main_navigation_list">
@@ -34,22 +36,26 @@
           </ul>
           <address class="address_links">
             <ul class="address_links_list">
-              <li class="address_links_item">
-                <a href="tel:+380960000007">
-                  <img src="./images/phone_icon.svg" alt="phone icon" />
-                </a>
-              </li>
-              <li class="address_links_item">
-                <a href="#">
-                  <svg width="32" height="32" stroke="red" fill="grey">
-                    <use href="./images/facebook_icon.svg"></use>
+              <li>
+                <a class="address_links_item" href="tel:+380960000007">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </a>
               </li>
-              <li class="address_links_item">
-                <a href="#"
-                  ><img src="./images/instagram_icon.svg" alt="instagram icon"
-                /></a>
+              <li>
+                <a class="address_links_item" href="#">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="address_links_item" href="#">
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </address>
@@ -62,12 +68,49 @@
           <div class="hero-content">
             <p class="hero-title">Косметологічна клініка</p>
             <h1 class="hero-title-accent">beauty zone</h1>
-            <button class="main-button">Замовити дзвінок</button>
+            <button class="main-button modal-btn-open" type="button">
+              Замовити дзвінок
+            </button>
             <p class="hero-description">
               Запишись та отримай безкоштовну консультацію нашого косметолога
             </p>
           </div>
         </div>
+        <svg
+          class="hero-gradient"
+          max-width="1403"
+          max-height="633"
+          viewBox="0 0 1403 633"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M-37 -0.596191H1402.96V657.338H-37V-0.596191Z"
+            fill="url(#paint0_linear_46_244)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_46_244"
+              x1="307.49"
+              y1="284.68"
+              x2="1253.75"
+              y2="262.367"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.0965471" stop-color="white" />
+              <stop
+                offset="0.260792"
+                stop-color="white"
+                stop-opacity="0.850898"
+              />
+              <stop
+                offset="0.527418"
+                stop-color="white"
+                stop-opacity="0.193204"
+              />
+              <stop offset="0.744605" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
       </section>
       <section id="about_us" class="about-section">
         <div class="container">
@@ -153,12 +196,82 @@
             </li>
           </ul>
         </div>
+        <svg
+          class="why_we_are-gradient"
+          height="1507"
+          viewBox="0 0 1440 1507"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M1015.22 1337.67C843.995 1420.41 681.707 1522.18 492.376 1504.43C294.908 1485.92 120.319 1385.32 -15.7281 1241.03C-170.733 1076.62 -313.597 883.153 -306.334 657.304C-298.462 412.497 -193.856 145.53 23.1542 31.9091C227.164 -74.9055 448.972 123.559 678.526 141.655C938.036 162.113 1224.83 -17.697 1429.76 142.796C1655.09 319.273 1777.41 658.366 1683.59 928.798C1594.61 1185.29 1259.68 1219.54 1015.22 1337.67Z"
+            fill="url(#paint0_linear_64_137)"
+            fill-opacity="0.2"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_64_137"
+              x1="851"
+              y1="-23.0002"
+              x2="851"
+              y2="1197.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.334676" stop-color="#2B7FFF" />
+              <stop offset="0.634564" stop-color="#2B7FFF" stop-opacity="0" />
+              <stop offset="0.894715" stop-color="#2B7FFF" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
       </section>
       <section id="our_procedures" class="our-procedures-section">
         <div class="container">
           <h2 class="our-procedures-title">
             Наші <span class="accent">процедури</span>
           </h2>
+          <div class="our-procedure-content">
+            <button type="button" class="arrow-button left">
+              <svg width="18" height="16">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <ul class="our-procedures-list">
+              <li class="our-procedures-item">
+                <img
+                  class="our-procedures-image"
+                  src="./images/mask-procedure.jpg"
+                  alt="спеціаліст робить маску для обличчя"
+                />
+                <p class="our-procedures-description">
+                  Маски <br />для обличчя
+                </p>
+              </li>
+              <li class="our-procedures-item">
+                <img
+                  class="our-procedures-image"
+                  src="./images/injections-procedure.jpg"
+                  alt="спеціаліст робить ін'єкцію"
+                />
+                <p class="our-procedures-description">
+                  Ін'єкції <br />для обличчя
+                </p>
+              </li>
+              <li class="our-procedures-item">
+                <img
+                  class="our-procedures-image"
+                  src="./images/cleaning-procedure.jpg"
+                  alt="спеціаліст робить чистку обличчя"
+                />
+                <p class="our-procedures-description">Очищення <br />обличчя</p>
+              </li>
+            </ul>
+            <button type="button" class="arrow-button">
+              <svg width="18" height="16">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section id="contacts" class="contacts-section">
@@ -232,5 +345,11 @@
         </div>
       </div>
     </footer>
+    <div class="modal-backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">close</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
