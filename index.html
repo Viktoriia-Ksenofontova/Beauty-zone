@@ -38,21 +38,21 @@
             <ul class="address_links_list">
               <li>
                 <a class="address_links_item" href="tel:+380960000007">
-                  <svg class="address-icon" width="32" height="32">
+                  <svg width="32" height="32">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a class="address_links_item" href="#">
-                  <svg class="address-icon" width="32" height="32">
+                  <svg width="32" height="32">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a class="address_links_item" href="#">
-                  <svg class="address-icon" width="32" height="32">
+                  <svg width="32" height="32">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
@@ -137,16 +137,18 @@
               </div>
             </div>
             <div class="about-section-images">
-              <img
-                class="face_image"
-                src="./images/before.jpg"
-                alt="обличчя жінки до процедури"
-              />
-              <img
-                class="face_image"
-                src="./images/result.jpg"
-                alt="обличчя жінки після процедури"
-              />
+              <div class="face_image">
+                <img
+                  src="./images/before.jpg"
+                  alt="обличчя жінки до процедури"
+                />
+              </div>
+              <div class="face_image">
+                <img
+                  src="./images/result.jpg"
+                  alt="обличчя жінки після процедури"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -279,27 +281,86 @@
           <h2 class="contacts-section-title">
             Як нас <span class="accent">знайти</span>
           </h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.939879508011!2d30.51554861186786!3d50.44222048783819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C70YzQstCw0YAg0KLQsNGA0LDRgdCwINCo0LXQstGH0LXQvdC60LAsIDUsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1745498909998!5m2!1suk!2sua"
-            width="605"
-            height="481"
-            style="border: 0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
+          <div class="contacts-content">
+            <iframe
+              class="contacts-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.939879508011!2d30.51554861186786!3d50.44222048783819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C70YzQstCw0YAg0KLQsNGA0LDRgdCwINCo0LXQstGH0LXQvdC60LAsIDUsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1745498909998!5m2!1suk!2sua"
+              height="482"
+              style="border: 0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+            <div class="contacts-form">
+              <h3 class="contacts-form-title">
+                Запишіться <span class="accent">безкоштовно</span><br />та
+                отримайте подарунок
+              </h3>
+              <form class="form" name="contacts-form">
+                <div class="contact-form-field">
+                  <label for="full-name" class="visually-hidden">
+                    Ваше ім'я та прізвище
+                  </label>
+                  <input
+                    class="form-input"
+                    id="full-name"
+                    type="text"
+                    name="full-name"
+                    placeholder="Ваше ім'я та прізвище"
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <label for="user-tel" class="visually-hidden">
+                    Ваш номер телефону
+                  </label>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="iser-tel"
+                    name="user-tel"
+                    placeholder="Ваш номер телефону"
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <label for="user-email" class="visually-hidden">
+                    Ваша електронна пошта
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                    placeholder="Ваша електронна пошта"
+                  />
+                </div>
+                <button type="submit" class="form-button">
+                  Записатись безкоштовно
+                </button>
+                <p class="form-agreement">
+                  Натискаючи на кнопку я погоджуюсь
+                  <br /><a class="form-agreement accent" href="#"
+                    >з політикою конфіденційності</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
         <nav class="footer-navigation">
-          <a href="/">
-            <img
-              src="./images/logo.svg"
-              alt="Логотип косметологічної клініки"
-            />
-          </a>
+          <div class="footer-logo-container">
+            <a class="footer-logo" href="/">
+              <img
+                width="83"
+                height="42"
+                src="./images/logo.svg"
+                alt="Логотип косметологічної клініки"
+              />
+            </a>
+          </div>
           <ul class="footer-links-list">
             <li class="footer-links-item">
               <a class="footer-link" href="#">Про нас</a>
@@ -315,39 +376,130 @@
             </li>
           </ul>
         </nav>
-        <address>
-          <ul class="footer-address-list">
-            <li class="footer-address-item">
-              <a class="footer-address-link" href="tel:+380960000007">
-                + 38 (096) 000 00 07
-              </a>
-            </li>
-            <li class="footer-address-item">
-              <a class="footer-address-link" href="mailto:beautyzone@gmail.com">
-                beautyzone@gmail.com
-              </a>
-            </li>
-            <li class="footer-address-item">
-              <a
-                class="footer-address-link"
-                href="https://maps.app.goo.gl/jdvyp2Bfg1jWRPdn8"
-                target="_blank"
-              >
-                Україна, м.Київ,
-                <br />бул.Тараса Шевченка, 5
-              </a>
-            </li>
-          </ul>
-        </address>
-        <div>
-          <a class="footer-link" href="#">Політика конфіденційності</a>
-          <p class="footer-text">&copy; 2022 Дані захищені</p>
+        <div class="footer-address-container">
+          <address>
+            <ul class="footer-address-list">
+              <li class="footer-address-item">
+                <a
+                  class="footer-address-link footer-link"
+                  href="tel:+380960000007"
+                >
+                  + 38 (096) 000 00 07
+                </a>
+              </li>
+              <li class="footer-address-item">
+                <a
+                  class="footer-address-link footer-link"
+                  href="mailto:beautyzone@gmail.com"
+                >
+                  beautyzone@gmail.com
+                </a>
+              </li>
+              <li class="footer-address-item">
+                <a
+                  class="footer-address-link footer-link"
+                  href="https://maps.app.goo.gl/jdvyp2Bfg1jWRPdn8"
+                  target="_blank"
+                >
+                  Україна, м.Київ,
+                  <br />бул.Тараса Шевченка, 5
+                </a>
+              </li>
+            </ul>
+            <ul class="footer-icons-list">
+              <li>
+                <a class="footer-icons_item" href="tel:+380960000007">
+                  <svg width="42" height="42">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-icons_item" href="#">
+                  <svg width="42" height="42">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-icons_item" href="#">
+                  <svg width="42" height="42">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+          <div>
+            <a class="footer-link" href="#">Політика конфіденційності</a>
+            <p class="footer-text">&copy; 2022 Дані захищені</p>
+          </div>
         </div>
       </div>
+      <img class="footer-image" src="./images/boutles.png" alt="" />
     </footer>
     <div class="modal-backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">close</button>
+        <button class="modal-btn-close" type="button">
+          <svg width="16" height="16">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p class="modal-description">
+          Запишіться <span class="accent">безкоштовно</span><br />та отримайте
+          подарунок
+        </p>
+        <form class="form" name="request-call" autocomplete="off">
+          <div class="form-field">
+            <label for="full-name" class="visually-hidden">
+              Ваше ім'я та прізвище
+            </label>
+            <input
+              class="form-input"
+              id="full-name"
+              type="text"
+              name="full-name"
+              placeholder="Ваше ім'я та прізвище"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="user-tel" class="visually-hidden">
+              Ваш номер телефону
+            </label>
+            <input
+              class="form-input"
+              type="tel"
+              id="iser-tel"
+              name="user-tel"
+              placeholder="Ваш номер телефону"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="user-email" class="visually-hidden">
+              Ваша електронна пошта
+            </label>
+            <input
+              class="form-input"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Ваша електронна пошта"
+            />
+          </div>
+
+          <button type="submit" class="form-button">
+            Записатись безкоштовно
+          </button>
+          <p class="form-agreement">
+            Натискаючи на кнопку я погоджуюсь
+            <br /><a class="form-agreement accent" href="#"
+              >з політикою конфіденційності</a
+            >
+          </p>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
