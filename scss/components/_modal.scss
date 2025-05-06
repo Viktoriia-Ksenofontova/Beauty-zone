@@ -1,0 +1,114 @@
+.modal-backdrop {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(1, 31, 74, 0.4);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 20px;
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal-backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  padding: 42px 144px;
+  border-radius: 48px;
+  width: 100%;
+  max-width: 723px;
+  height: 100%;
+  max-height: 681px;
+  background-color: var(--color-main-darkblue);
+  overflow-y: auto;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  fill: var(--color-main-white);
+  transition: fill 200ms;
+}
+
+.modal-btn-close:hover {
+  fill: var(--color-main-lightblue);
+}
+
+.modal-title {
+  margin-bottom: 40px;
+  font-family: 'Play', sans-serif;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+  color: var(--color-main-white);
+}
+
+.modal-description {
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  color: var(--color-main-white);
+
+  .accent {
+    color: var(--color-main-lightblue);
+  }
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+  text-align: center;
+}
+.form-field {
+  margin-bottom: 24px;
+}
+.form-input {
+  width: 100%;
+  padding: 16px 32px;
+  border: 2px solid var(--color-secondary-gray);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--color-main-white);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.form-input:focus {
+  background-color: var(--color-secondary-gray);
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--color-main-white);
+  font-size: 13px;
+}
+
+.form-agreement {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-secondary-gray);
+}
+
+.form-agreement.accent {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 300ms;
+}
+
+.form-agreement:hover .accent {
+  color: var(--color-main-lightblue);
+}

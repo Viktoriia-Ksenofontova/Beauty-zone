@@ -1,0 +1,55 @@
+.our-procedures-title {
+  margin: 0 0 48px 0;
+  line-height: normal;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+
+  .accent {
+    color: var(--color-main-lightblue);
+  }
+}
+
+.our-procedure-content {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.our-procedures-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: calc(100% - (16px * 2) - (32px + 44px) * 2);
+  flex-grow: 1;
+}
+.our-procedures-item {
+  position: relative;
+  flex-basis: calc((100% - 32px) / 3);
+  height: 456px;
+  max-width: 344px;
+  border-radius: 4px 120px;
+  overflow: hidden;
+  background-image: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 47.4%,
+    rgba(1, 28, 68, 0.73) 82.66%,
+    #011c44 99.06%
+  );
+}
+
+.our-procedures-image {
+  position: relative;
+  z-index: -1;
+}
+
+.our-procedures-description {
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.18;
+  color: var(--color-main-white);
+}

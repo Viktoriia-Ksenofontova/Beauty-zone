@@ -1,0 +1,29 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  color: var(--color-main-darkblue);
+  background-color: var(--color-main-white);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
