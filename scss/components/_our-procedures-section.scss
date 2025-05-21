@@ -1,34 +1,56 @@
-.our-procedures-title {
-  margin: 0 0 48px 0;
-  line-height: normal;
-  font-family: 'Play', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  text-align: center;
-
-  .accent {
-    color: var(--color-main-lightblue);
+.our-procedures-section {
+  padding: 0 0 40px 0;
+  @media screen and (min-width: $bp-desktop) {
+    padding-bottom: 96px;
   }
 }
 
-.our-procedure-content {
+.our-procedures-section__title {
+  margin: 0 0 24px 0;
+  text-align: center;
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+.our-procedures-section__content {
   display: flex;
   gap: 32px;
   align-items: center;
 }
 
-.our-procedures-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  width: calc(100% - (16px * 2) - (32px + 44px) * 2);
-  flex-grow: 1;
+.swiper-container {
+  width: 320px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $bp-tablet) {
+    width: 656px;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    width: 1064px;
+  }
 }
-.our-procedures-item {
+
+.swiper-slide {
+  width: 320px;
+  @media screen and (min-width: $bp-desktop) {
+    width: 344px;
+  }
+}
+
+.our-procedures-section__list {
+  margin-bottom: 16px;
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.our-procedures-section__item {
   position: relative;
-  flex-basis: calc((100% - 32px) / 3);
-  height: 456px;
-  max-width: 344px;
+  height: 416px;
   border-radius: 4px 120px;
   overflow: hidden;
   background-image: linear-gradient(
@@ -37,19 +59,31 @@
     rgba(1, 28, 68, 0.73) 82.66%,
     #011c44 99.06%
   );
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    height: 456px;
+  }
 }
 
-.our-procedures-image {
+.our-procedures-section__image {
   position: relative;
   z-index: -1;
 }
 
-.our-procedures-description {
+.our-procedures-section__description {
   position: absolute;
-  bottom: 32px;
+  bottom: 24px;
   width: 100%;
   text-align: center;
-  font-size: 22px;
   line-height: 1.18;
   color: var(--color-main-white);
+  font-size: 20px;
+
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 22px;
+    bottom: 32px;
+  }
 }

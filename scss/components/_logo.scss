@@ -1,0 +1,14 @@
+.logo {
+  display: inline-block;
+  width: 56px;
+  img {
+    height: 30px;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    width: 74px;
+    img {
+      height: 42px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 310px;
+  text-align: center;
+}
+
+.form__field {
+  margin-bottom: 16px;
+  @media screen and (min-width: $bp-tablet) {
+    margin-bottom: 24px;
+  }
+}
+
+.form__input {
+  width: 100%;
+  padding: 16px 32px;
+  border: 2px solid var(--color-secondary-gray);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--color-main-white);
+  font-size: 13px;
+  line-height: 1;
+
+  &:focus {
+    background-color: var(--color-secondary-gray);
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--color-main-white);
+    font-size: 13px;
+  }
+}
+
+.form__agreement {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-secondary-gray);
+  &:hover {
+    .form__agreement--accent {
+      color: var(--color-main-lightblue);
+    }
+  }
+}
+
+.form__agreement--accent {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 300ms;
+}

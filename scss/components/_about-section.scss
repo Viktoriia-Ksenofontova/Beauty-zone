@@ -1,95 +1,133 @@
 .about-section {
-  padding-bottom: 173px;
+  padding-bottom: 104px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-bottom: 173px;
+  }
 }
 
-.about-flex-container {
+.about-section__flex-container {
   position: relative;
   display: flex;
   gap: 32px;
   justify-content: space-between;
 }
 
-.about-section-content {
-  max-width: 709px;
-  padding-top: 40px;
-}
-
-.about-section-title {
-  margin: 0 0 40px 0;
-  font-family: 'Play', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: normal;
-
-  .accent {
-    color: var(--color-main-lightblue);
-    text-transform: capitalize;
+.about-section__content {
+  padding-top: 12px;
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 40px;
+    max-width: 709px;
   }
 }
-.about-section-text {
+
+.about-section__title {
+  margin: 0 0 24px 0;
+
+  .text-accent {
+    text-transform: capitalize;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.about-section__text {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  font-size: 22px;
+
+  font-size: 18px;
+  gap: 16px;
+  line-height: 1.5;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/star-big.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -46px;
+    right: 2px;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 22px;
+    gap: 40px;
+    line-height: 1.73;
+
+    &::after {
+      width: 64px;
+      height: 64px;
+
+      right: 295px;
+      top: 346px;
+    }
+  }
 }
 
-.about-section-text::after {
-  content: '';
-  position: absolute;
-  z-index: 3;
-  width: 64px;
-  height: 64px;
-  background-image: url('../images/star-big.png');
-  background-repeat: no-repeat;
-  right: 295px;
-  top: 346px;
-}
-
-.about-section-text-accent {
+.about-section__text--bold {
   text-transform: capitalize;
   font-weight: 600;
 }
 
-.about-section-images {
+.about-section__images {
+  display: none;
+
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    flex-basis: 500px;
+    flex-shrink: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 3;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../images/star-medium.svg');
+      top: 32px;
+      right: -20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 3;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../images/star-small.svg');
+      top: 270px;
+      right: 12px;
+    }
+  }
+}
+
+.about-section__imageFace {
   display: flex;
-  gap: 40px;
-  flex-direction: column;
-  flex-basis: 500px;
   flex-shrink: 1;
-}
-
-.about-section-images::before {
-  content: '';
-  position: absolute;
-  z-index: 3;
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-image: url('../images/star-medium.png');
-  top: 32px;
-  right: -20px;
-}
-
-.about-section-images::after {
-  content: '';
-  position: absolute;
-  z-index: 3;
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-image: url('../images/star-small.png');
-  top: 270px;
-  right: 12px;
-}
-
-.face_image {
   overflow: hidden;
-  max-width: 328px;
-  max-height: 328px;
   border-radius: 50%;
   box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.2);
-}
 
-.face_image:last-child {
-  align-self: flex-end;
+  &:last-child {
+    align-self: flex-end;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    width: 220px;
+    height: 220px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    height: 328px;
+    width: 328px;
+  }
 }

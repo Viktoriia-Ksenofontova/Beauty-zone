@@ -1,0 +1,15 @@
+.section-title {
+  font-family: 'Play', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: normal;
+
+  .text-accent {
+    font-weight: 700;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 64px;
+    font-weight: 700;
+  }
+}

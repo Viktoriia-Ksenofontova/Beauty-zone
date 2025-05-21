@@ -1,50 +1,75 @@
 .contacts-section {
-  padding: 96px 0;
-}
-
-.contacts-section-title {
-  margin: 0 0 48px 0;
-  line-height: normal;
-  font-family: 'Play', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  text-align: center;
-
-  .accent {
-    color: var(--color-main-lightblue);
+  padding: 40px 0 0 0;
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
 
-.contacts-content {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-}
-.contacts-map {
-  border-radius: 32px;
-  flex-basis: 605px;
+.contacts-section__title {
+  margin: 0 0 24px 0;
+  text-align: center;
+
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 48;
+  }
 }
 
-.contacts-form {
-  padding: 48px 12px;
-  background-color: var(--color-main-darkblue);
-  flex-basis: 422px;
-  border-radius: 32px;
-  flex-grow: 0;
+.contacts-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 0 -20px;
+  @media screen and (min-width: $bp-tablet) {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 32px;
+    margin: 0;
+  }
 }
-.contacts-form-title {
-  margin-bottom: 32px;
+.contacts-section__map {
+  width: 100%;
+  height: 232px;
+  margin: 0 -20px;
+
+  @media screen and (min-width: $bp-tablet) {
+    min-width: 302px;
+    max-width: 604px;
+    height: 482px;
+    border-radius: 32px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 604px;
+  }
+}
+
+.contacts-section__form {
+  padding: 42px 24px;
+  max-width: 320px;
+  background-color: var(--color-main-darkblue);
+  border-radius: 32px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 48px 56px;
+    max-width: 422px;
+    flex-grow: 0;
+  }
+}
+.contacts-section__form-title {
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 22px;
   color: var(--color-main-white);
   text-align: center;
   line-height: 1;
-
-  .accent {
-    color: var(--color-main-lightblue);
+  @media screen and (min-width: $bp-tablet) {
+    margin-bottom: 32px;
   }
 }
 
-.contact-form-field {
+.contacts-section__form-field {
   margin-bottom: 16px;
 }

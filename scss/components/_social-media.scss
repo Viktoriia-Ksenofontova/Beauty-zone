@@ -1,0 +1,26 @@
+.social-media__list {
+  display: flex;
+  align-items: center;
+}
+
+.social-media__item {
+  display: flex;
+  align-items: center;
+  transition: fill 200ms;
+}
+
+.social-media__item--dark {
+  fill: var(--color-main-darkblue);
+
+  &:hover {
+    fill: var(--color-main-lightblue);
+  }
+}
+
+.social-media__item--light {
+  fill: var(--color-main-white);
+
+  &:hover {
+    fill: var(--color-main-lightblue);
+  }
+}
